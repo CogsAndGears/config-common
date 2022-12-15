@@ -1,0 +1,6 @@
+# Copy to `~/.gitconfig` and run:
+#     git config --global core.excludesfile ~/.gitignore
+# Vim temp files
+*.swp
+# Emacs temp files
+*~

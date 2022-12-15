@@ -1,0 +1,17 @@
+[user]
+	name = cogs
+	email = cogs@springless.com
+[credential]
+	helper = manager
+[diff]
+	tool = bc
+[merge]
+	tool = bc
+[mergetool "bc"]
+	trustExitCode = true
+[difftool "bc"]
+	path = c:/program files/beyond compare 4/bcomp.exe
+[mergetool "bc"]
+	path = c:/program files/beyond compare 4/bcomp.exe
+[alias]
+	fdiff = difftool --dir-diff

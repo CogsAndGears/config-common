@@ -1,0 +1,32 @@
+[user]
+	name = cogs
+	email = cogs@springless.com
+[credential]
+	helper = manager
+[diff]
+	tool = bc
+[merge]
+	tool = bc
+[mergetool "bc"]
+	trustExitCode = true
+[difftool "bc"]
+    path = "/mnt/c/Program Files/Beyond Compare 4/BComp.exe"
+    cmd = \"/mnt/c/Program Files/Beyond Compare 4/BComp.exe\" -expandall \"$(wslpath -wa $LOCAL)\" \"$(wslpath -wa $REMOTE)\"
+[mergetool "bc"]
+	path = "/mnt/c/Program Files/Beyond Compare 4/BComp.exe"
+    cmd = \"/mnt/c/Program Files/Beyond Compare 4/BComp.exe\" -expandall \"$(wslpath -wa $LOCAL)\" \"$(wslpath -wa $REMOTE)\" \"$(wslpath -wa $BASE)\" \"$(wslpath -wa $MERGED)\"
+[alias]
+	fdiff = difftool --no-symlinks --dir-diff
+[oh-my-zsh]
+    # the status calls for git repositories can take forever. This prevents you from seeing if a repository is
+    # dirty, but avoids those calls
+    hide-dirty = 1
+[core]
+	editor = vim
+	excludesfile = /home/cogs/.gitignore
+[pager]
+	branch = false
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
