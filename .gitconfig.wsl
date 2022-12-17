@@ -23,7 +23,7 @@
     hide-dirty = 1
 [core]
 	editor = vim
-	excludesfile = /home/cogs/.gitignore
+	excludesfile = /home/cogs/.global.gitignore
 [pager]
 	branch = false
 [init]
