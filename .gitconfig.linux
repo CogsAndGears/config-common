@@ -16,4 +16,15 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[diff]
+	tool=bc
+[merge]
+	tool=bc
+[mergetool "bc"]
+	trustExitCode = true
+	path = /usr/bin/bcompare
+[difftool "bc"]
+	path = /usr/bin/bcompare
+[alias]
+	fdiff = difftool --dir-diff
 
