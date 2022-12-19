@@ -1,4 +1,4 @@
-#1/usr/bin/env bash
+#!/usr/bin/env bash
 
 # ensure dependencies are installed first. On debian this is:
 #
