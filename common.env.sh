@@ -17,6 +17,14 @@ alias dc=docker-compose
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # Add Android SDK to path
-export PATH=$PATH:${MY_APP_DIR}/install/android-studio/bin
-alias android-studio="pushd ${MY_APP_DIR}/install/android-studio/bin && ./studio.sh && popd"
+export PATH=$PATH:${MY_APP_DIR}/install/android-studio/installed/bin
+alias android-studio=studio.sh
 alias adb="~/Android/Sdk/platform-tools/adb"
+
+# Add obsidian to path
+export PATH=$PATH:${MY_APP_DIR}/install/obsidian/installed
+
+# Add texlive to path
+export PATH=$PATH:/srv/app/install/texlive/2024/bin/x86_64-linux
+export INFOPATH=$INFOPATH:/srv/app/install/texlive/2024/texmf-dist/doc/info
+export MANPATH=$MANPATH:/srv/app/install/texlive/2024/texmf-dist/doc/man
