@@ -1,9 +1,11 @@
+#!/bin/bash
 # Permit the computer to go to sleep after the last Claude session stops running
 
 LOCK_DIR="/tmp/claude_inhibit_sessions"
 
 # Clean up stale sessions
 for f in "$LOCK_DIR"/*; do
+  [ -f "$f" ] || continue
   pid=$(basename "$f")
   kill -0 "$pid" 2>/dev/null || rm -f "$f"
 done
@@ -18,3 +20,6 @@ if [ -z "$(ls "$LOCK_DIR" 2>/dev/null)" ]; then
     rm -f /tmp/claude_inhibit.pid
   fi
 fi
+
+exit 0
+
