@@ -1,30 +1,41 @@
 [user]
-	name = cogs
-	email = cogs@springless.com
+    name = cogs
+    email = cogs@springless.com
 [credential]
-	helper = manager
+    helper = manager
 [oh-my-zsh]
     # the status calls for git repositories can take forever. This prevents you from seeing if a repository is
     # dirty, but avoids those calls
     hide-dirty = 1
 [core]
-	editor = vim
-	excludesfile = /home/cogs/.global.gitignore
+    editor = vim
+    excludesfile = /home/cogs/.global.gitignore
+    pager = delta
 [pager]
-	branch = false
+    branch = false
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [pull]
-	rebase = false
+    rebase = false
 [diff]
-	tool=bc
+    tool=bc
 [merge]
-	tool=bc
+    tool=bc
 [mergetool "bc"]
-	trustExitCode = true
-	path = /usr/bin/bcompare
+    trustExitCode = true
+    path = /usr/bin/bcompare
 [difftool "bc"]
-	path = /usr/bin/bcompare
+    path = /usr/bin/bcompare
 [alias]
-	fdiff = difftool --dir-diff
+    fdiff = difftool --dir-diff
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    # git cli diff formatting utility in rust
+    # `cargo install diff-delta`
+    # https://github.com/dandavison/delta
+    navigate = true # use n and N to move between diff sections
+    dark = true     # or light = true or omit for auto-detection
+    side-by-side = true
+    line-numbers = true
 
