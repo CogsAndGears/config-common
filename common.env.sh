@@ -20,7 +20,7 @@ alias dc=docker-compose
 
 # Add Android SDK to path
 export PATH=$PATH:${MY_APP_DIR}/install/android-studio/installed/bin
-alias android-studio=studio.sh
+alias android-studio=studio
 alias adb="~/Android/Sdk/platform-tools/adb"
 
 # Add obsidian to path
