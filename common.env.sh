@@ -37,3 +37,4 @@ export PATH=$PATH:/srv/app/install/ruby/installed/bin
 # Add manual Postgres build to path
 export PATH=$PATH:/srv/app/install/postgresql/installed/bin
 
+alias c-commit="$HOME/.config/config-common/claude/scripts/claude-commit.sh | git commit -F -"
