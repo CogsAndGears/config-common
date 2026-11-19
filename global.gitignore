@@ -4,3 +4,5 @@
 *.swp
 # Emacs temp files
 *~
+# Convenience ignore for stashing any files that I want to keep in a git-tracked folder
+.gitignored/

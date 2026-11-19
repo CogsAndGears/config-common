@@ -16,7 +16,7 @@ if [ -f "${GLOBAL_GITIGNORE}" ]; then
   mv "${GLOBAL_GITIGNORE}" "${GLOBAL_GITIGNORE}.bak${NOW}"
   echo "Global gitignore exists; backing up to ${GLOBAL_GITIGNORE}.bak${NOW}"
 fi
-ln -s "${SCRIPT_DIR}/.global.gitignore" "${GLOBAL_GITIGNORE}"
+ln -s "${SCRIPT_DIR}/global.gitignore" "${GLOBAL_GITIGNORE}"
 if [ -f "${GIT_CONFIG}" ]; then
   mv "${GIT_CONFIG}" "${GIT_CONFIG}.bak${NOW}"
 fi
