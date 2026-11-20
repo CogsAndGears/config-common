@@ -38,3 +38,9 @@ export PATH=$PATH:/srv/app/install/ruby/installed/bin
 export PATH=$PATH:/srv/app/install/postgresql/installed/bin
 
 alias c-commit="$HOME/.config/config-common/claude/scripts/claude-commit.sh | git commit -F -"
+
+# Show the hostname when connecting to another machine via ssh
+if [[ -n $SSH_CONNECTION ]]; then
+  PROMPT="%F{yellow}%m%f $PROMPT"
+fi
+
