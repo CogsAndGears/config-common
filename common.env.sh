@@ -44,3 +44,15 @@ if [[ -n $SSH_CONNECTION ]]; then
   PROMPT="%F{yellow}%m%f $PROMPT"
 fi
 
+# Add tab-completion for justfiles
+# From here: https://stackoverflow.com/questions/77392573/getting-autocomplete-with-zsh-and-justfile-homebrew
+# If I was using homebrow it looks like there might be a different option
+_just_completion() {
+  if [[ -f "justfile" ]]; then
+    local options
+    options="$(just --summary)"
+    reply=(${(s: :)options}) # turn into array and write to return variable
+  fi
+}
+# add `-f` to include files in the same directory
+compctl -K _just_completion just
